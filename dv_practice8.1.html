@@ -1,0 +1,17 @@
+<html>
+	<body>
+		<canvas id="mycanvas" width="600" height="600" style="border:2px solid #FF0000">
+		not display
+		</canvas>
+		<script>
+			var canvas=document.getElementById("mycanvas");
+			var ctx=canvas.getContext('2d');
+			ctx.strokeStyle="white";
+			ctx.fillRect(0,0,600,600);
+			var mygradient=ctx.createLinearGradient(75,50,90,60);
+			mygradient.addColorStop(1,"orange");
+			ctx.StrokeStyle=mygradient; 
+			ctx.strokeRect(100,100,100,100);
+		</script>
+	</body>
+</html>

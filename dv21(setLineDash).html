@@ -1,0 +1,16 @@
+<html>
+	<body>
+		<canvas id="mycanvas" width="600" height="600" style="border:2px solid #FF0000">
+		not display
+		</canvas>
+		<script type="text/javascript">
+			var canvas=document.getElementById('mycanvas');
+			var ctx=canvas.getContext('2d');
+						ctx.setLineDash([5,10,5]);   //repeats(5,10,5,5,10,5,5,10,5.....)solid of 5,gap of 10,solid of 5,gap of 5,solid of 10,...
+						ctx.StrokeStyle="blue";
+						ctx.strokeRect(100,100,200,100);
+						ctx.stroke();
+			
+		</script>
+	</body>
+</html>

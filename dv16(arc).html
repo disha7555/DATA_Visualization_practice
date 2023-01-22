@@ -1,0 +1,25 @@
+<html>
+	<body>
+		<canvas id="mycanvas" width="600" height="600" style="border:2px solid #FF0000">
+		not display
+		</canvas>
+		<script type="text/javascript">
+			var canvas=document.getElementById('mycanvas');
+			var ctx=canvas.getContext('2d');
+		
+			ctx.beginPath();
+			ctx.arc(200,200,150,0,2*Math.PI,true);
+			ctx.stroke();
+						ctx.fillStyle="blue";
+			ctx.fill();
+			ctx.beginPath();
+			ctx.globalAlpha=1.0; //shows the second round transperant if val=0.0 to 0.9 if val=1.0 then not transparent
+			ctx.arc(300,300,50,0,2*Math.PI);
+			strokeStyle="#123456";
+			
+			ctx.stroke();
+			ctx.fillStyle="yellow";
+			ctx.fill();
+		</script>
+	</body>
+</html>

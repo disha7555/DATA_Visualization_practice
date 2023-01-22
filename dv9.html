@@ -1,0 +1,19 @@
+<html>
+	<body>
+		<canvas id="mycanvas" width="600" height="600" style="border:2px solid #FF0000">
+		not display
+		</canvas>
+		<script>
+			var canvas=document.getElementById("mycanvas");
+			var ctx=canvas.getContext('2d');
+			ctx.beginPath();
+			ctx.fillStyle="yellow";
+			ctx.rect(100,100,100,100);
+			
+			
+			ctx.fillStyle="red"; 
+			ctx.rect(200,200,100,100);
+			ctx.fill();
+		</script>
+	</body>
+</html>

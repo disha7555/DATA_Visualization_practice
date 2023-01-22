@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<script type="text/javascript" src="canvasjs.min.js">
+		</script>
+		<script>
+			window.onload=function()
+			{
+			var chart=new CanvasJS.Chart("Container",
+				{
+				title:{
+						text:"My First Chart"
+					},
+				data:[
+					 {
+					 type:"column",
+					 dataPoints:[{label:'A',y:73},
+								{label:'B',y:56}]
+					}
+					,
+					{
+					type:"column",
+					dataPoints:[{label:'A',y:55},
+								{label:'B',y:75}]
+					
+					
+					}]
+					});
+					chart.render();
+			
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div id = "Container" height = 50% width = 50%></div>
+	</body>
+</html>	
+					 
+					 
+					 
+					 
+					 
+					 
+					 

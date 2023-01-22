@@ -1,0 +1,25 @@
+<html>
+	<body>
+		<canvas id="mycanvas" width="600" height="600" style="border:2px solid #FF0000">
+		not display
+		</canvas>
+		<script>
+			var canvas=document.getElementById("mycanvas");
+			var ctx=canvas.getContext('2d');
+			//ctx.fillStyle="white";
+			//ctx.fillRect(0,0,600,600);
+			var mygradient=ctx.createLinearGradient(0,0,200,200);
+			mygradient.addColorStop(1,"blue");
+			ctx.fillStyle=mygradient; 
+			ctx.fillRect(0,0,200,200);
+			
+			var mygradient=ctx.createLinearGradient(200,400,400,400);
+			mygradient.addColorStop(0,"blue");
+			mygradient.addColorStop(0.5,"purple");
+			mygradient.addColorStop(1,"red");
+			ctx.fillStyle=mygradient; 
+			ctx.fillRect(200,200,200,200);
+		</script>
+	</body>
+</html>
+<!--take gradient points from leftbottom to rightbottom-->

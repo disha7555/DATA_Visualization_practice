@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>lj</title>
+	</head>
+	<body>
+	<canvas id="mycanvas" width=300 height=300 style:"border:2px solid"></canvas>
+	<script type="text/javascript">
+	var canvas=document.getElementById('mycanvas');
+	var ctx=canvas.getContext('2d');
+	var startX=0;
+	var startY=0;
+	var width=100;
+	var height=100;
+	var endX=canvas.width-width;
+	var x=startX;
+	var y=startY;
+	var step=0;
+	function lerp(start,end,speed)
+	{
+	return start+(end-start)*speed;
+	}
+	function logic()
+	{
+	step+=0.02;
+	x=lerp(startX,startY,step)
+	if(x<endX)
+	{
+	requestAnimationFrame(draw);
+	}
+	}
+	function draw()
+	{
+	ctx.clearRect(0,0,canvas.width,canvas.height);
+	ctx.fillStyle="#FF0000";
+	ctx.fillRect(x,y,width,height);
+	}
+	requestAnimationFrame(draw);
+	
+	setInterval(logic,1000/60);
+	</script>
+	</body>
+	</html>
+	

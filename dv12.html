@@ -1,0 +1,27 @@
+<html>
+	<body>
+		<canvas id="mycanvas" width="600" height="600" style="border:2px solid #FF0000">
+		not display
+		</canvas>
+		<script type="text/javascript">
+			var canvas=document.getElementById('mycanvas');
+			var ctx=canvas.getContext('2d');
+			var mygradient=ctx.createLinearGradient(0,0,200,200);
+			mygradient.addColorStop(0,"blue");
+			mygradient.addColorStop(0.5,"red");
+			mygradient.addColorStop(1,"pink");
+			ctx.fillStyle=mygradient;
+			ctx.fillRect(0,0,200,200);
+		</script>
+	</body>
+</html>
+
+
+<!--var canvas=document.getElementById("mycanvas");
+			var ctx=canvas.getContext('2d');
+			//ctx.fillStyle="white";
+			//ctx.fillRect(0,0,600,600);
+			var mygradient=ctx.createLinearGradient(0,0,200,200);
+			mygradient.addColorStop(1,"blue");
+			ctx.fillStyle=mygradient; 
+			ctx.fillRect(0,0,200,200);-->

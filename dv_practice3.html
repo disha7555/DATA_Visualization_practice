@@ -1,0 +1,33 @@
+<html>
+	<body>
+		<canvas id="mycanvas" height="600" width="600" style="border:2px solid #FF0000">
+		</canvas>
+		<script type="text/javascript">
+			var canvas=document.getElementById("mycanvas");
+			var ctx=canvas.getContext('2d');
+						ctx.beginPath();
+			
+			var gradi=ctx.createLinearGradient(0,0,200,200);
+			
+			
+			//gradi.addColorStop(0,"red");
+			gradi.addColorStop(1,"blue");
+			ctx.fillStyle=gradi;
+			ctx.fillRect(0,0,200,200);
+			ctx.beginPath();
+			ctx.fillStyle="orange";
+			ctx.rect(400,400,200,200);
+			ctx.fill();
+			ctx.beginPath();
+			var gradi=ctx.createLinearGradient(200,400,400,400);
+			
+			
+			gradi.addColorStop(0,"yellow");
+			gradi.addColorStop(1,"green");
+			ctx.fillStyle=gradi;
+			ctx.fillRect(200,200,200,200);
+			
+			
+		</script>
+	</body>
+</html>

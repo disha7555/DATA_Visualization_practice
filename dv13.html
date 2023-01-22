@@ -1,0 +1,21 @@
+<html>
+	<body>
+		<canvas id="mycanvas" width="600" height="600" style="border:2px solid #FF0000">
+		not display
+		</canvas>
+		<script type="text/javascript">
+			var canvas=document.getElementById('mycanvas');
+			var ctx=canvas.getContext('2d');
+			ctx.lineWidth=20;
+			ctx.lineJoin="round";
+			ctx.lineCap="round";
+			ctx.moveTo(10,10);
+			ctx.lineTo(150,150);
+			ctx.stroke();
+			//ctx.moveTo(170,150);
+			ctx.lineTo(10,300);
+			ctx.stroke();
+		
+		</script>
+	</body>
+</html>

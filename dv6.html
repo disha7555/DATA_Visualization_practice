@@ -1,0 +1,18 @@
+<html>
+	<body>
+		<canvas id="mycanvas" width="600" height="600" style="border:2px solid #FF0000">
+		not display
+		</canvas>
+		<script>
+			var canvas=document.getElementById("mycanvas");
+			var ctx=canvas.getContext('2d');
+			//ctx.fillStyle="white";
+			//ctx.fillRect(0,0,600,600);
+			var mygradient=ctx.createRadialGradient(75,50,5,90,60,100);
+			mygradient.addColorStop(0,"blue");
+			mygradient.addColorStop(1,"orange");
+			ctx.fillStyle=mygradient; 
+			ctx.fillRect(100,100,100,100);
+		</script>
+	</body>
+</html>
